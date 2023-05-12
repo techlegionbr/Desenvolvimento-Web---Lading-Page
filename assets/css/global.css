@@ -1,11 +1,21 @@
 :root {
-  --color--var: #fff;
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-primary: #0c1137;
+  --color-secundary: #00dbff;
+  --color-third: #0061ff;
+
+  --color-light: #fff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-montserrat);
+  color: var(--color-light);
 }
 
 a {
