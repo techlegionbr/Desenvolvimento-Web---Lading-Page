@@ -1,7 +1,7 @@
 :root {
   --font-montserrat: "Montserrat", sans-serif;
   --color-primary: #0c1137;
-  --color-secundary: #00dbff;
+  --color-secondary: #00dbff;
   --color-third: #0061ff;
 
   --color-light: #fff;
@@ -25,4 +25,9 @@ a {
 
 ul {
   list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
