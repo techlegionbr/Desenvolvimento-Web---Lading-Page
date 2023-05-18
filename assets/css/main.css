@@ -59,6 +59,41 @@ body {
   border-radius: 2px;
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  position: absolute;
+  right: 100px;
+  top: 200px;
+  gap: 20px;
+}
+
+.form__input{
+  height: 50px;
+  padding: 10px 10px 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color:#ffffff3d;
+  color: #ffffffd2;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.form__input::placeholder{
+  color: #ffffffd2;
+}
+
+.form__input--submit{
+  background-color: #0061FF;
+  font-weight: bold;
+  transition: all .5s ease-in-out;
+}
+
+.form__input--submit:hover{
+  background-color: #033c97;
+}
+
 @media (max-width: 880px) {
   .header__content {
     flex-wrap: wrap;
