@@ -1,26 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desenvolvimento de sites</title>
-
-    <!-- embed a styles -->
-    <link rel="stylesheet" href="./assets/css/global.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-
-    <!-- embed a font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <h1>Lading page <span>| Desenvolvimento de sites</span></h1>
-    <p>Vamos começar a codar?</p>
-    <p>Deus me ajuda</p>
-  </body>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!--CSS Link-->
+    <link rel="stylesheet" href="style.css"> 
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;800&family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <!--Icon Link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div id="content">
+            <a href="/imgs">
+                <div id="imagem-logo">
+                    <img src="imgs/Logo_Tech_Legion_H_02_Blue (1).png" alt="logo da techlegion" width="200">
+                </div>
+            </a>
+            <nav>
+                <a>Home</a>
+                <a>Serviços</a>
+                <a>Sobre</a>
+                <a>Dúvidas</a>
+                <a>Contato</a>
+            </nav>
+            <button id="button-hamburguer"><i class='bx bx-menu'></i></button>
+        </div>
+    </header>
+    <section id="home">
+        <div id="content">
+            <div id="description">
+                <h1>Desenvolva seu site <i class='bx bx-desktop'></i></h1>
+                <h2>Morbi ac sollicitudin</h2><br>
+                <p>Aliquam sed turpis in sapien ullamcorper auctor. Sed quis nisl eu mauris consequat dictum. Mauris varius ornare orci et pharetra. Aliquam erat volutpat. Donec imperdiet nisi tempor, convallis turpis sed, bibendum est.</p>
+            </div>
+            <form>
+                <input placeholder="Nome">
+                <input placeholder="Email">
+                <input placeholder="Whatsapp">
+                <input placeholder="Segmento">
+                <button>Quero fazer o meu website</button>
+            </form>
+        </div>
+    </section>
+</body>
 </html>
