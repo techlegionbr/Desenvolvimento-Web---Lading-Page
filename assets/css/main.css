@@ -59,7 +59,7 @@ body {
   border-radius: 2px;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   width: 500px;
@@ -69,28 +69,103 @@ body {
   gap: 20px;
 }
 
-.form__input{
+.form__box {
   height: 50px;
-  padding: 10px 10px 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color:#ffffff3d;
+  background-color: #ffffff3d;
+  color: #ffffffd2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.form__box input {
+  background: none;
+  padding: 10px 10px 10px 20px;
+  width: 100%;
+  height: 100%;
+  border: none;
   color: #ffffffd2;
   font-size: 15px;
+  font-weight: bold;
+}
+
+.form__box input::placeholder {
+  color: #ffffffbd;
+}
+
+.form__box--segmento {
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+}
+.form__box--segmento button{
+  border: none;
+  background: none;
+  position: absolute;
+  right: 20px;
   cursor: pointer;
 }
-
-.form__input::placeholder{
-  color: #ffffffd2;
+.form__box--segmento button img{
+  transition: all .5s;
+}
+.form__box--segmento input{
+  cursor:pointer;
+}
+.form__box--dropdown{
+  height: 250px;
+  width: 500px;
+  padding: 10px;
+  position: absolute;
+  background-color: #022969;
+  transition: all .2s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  border: solid 1px #fff;
+  font-weight: bold;
+  z-index: -1;
+}
+.form__box--dropdown ul{
+  width: 100%;
+  position: absolute;
+}
+.form__box--dropdown ul li{
+  padding: 5px 0px 5px 15px;
+  transition: all .3s ;
+  margin-bottom: 5px;
+}
+.form__box--dropdown ul li:hover{
+  background-color: #033c97 ;
+  border-left: 5px solid var(--color-third);
+  
+}
+.selected{
+  background-color: var(--color-third);
 }
 
-.form__input--submit{
-  background-color: #0061FF;
+ .appear{
+  top: 280px;
+  opacity: 1;
+  z-index: 0 !important;
+
+ }
+.disappear {
+  top: 250px;
+  opacity: 0;
+}
+
+.form__box--submit {
+  background-color: var(--color-third);
   font-weight: bold;
   transition: all .5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.form__input--submit:hover{
+.form__box--submit:hover {
   background-color: #033c97;
 }
 
@@ -100,6 +175,7 @@ body {
 
     justify-content: center;
   }
+
   .menu {
     margin-top: 20px;
   }
@@ -109,6 +185,7 @@ body {
   .container {
     max-width: 480px;
   }
+
   .menu {
     display: none;
   }

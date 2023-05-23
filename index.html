@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Desenvolvimento de sites</title>
+  <!-- embed a script -->
+  <script src="./script.js" defer></script>
 
   <!-- embed a styles -->
   <link rel="stylesheet" href="./assets/css/global.css" />
@@ -44,12 +46,33 @@
   </header>
   <section>
     <form action="/submit" class="form">
-      <input type="text" id="nome" class="form__input form__input--nome" name="nome" required placeholder="Nome">
-      <input type="email" id="email" class="form__input form__input--email" name="email" required placeholder="Email">
-      <input type="number" id="whatsapp" class="form__input form__input--whatsapp" name="whatsapp" required
-        placeholder="WhatsApp">
-      <input type="text" name="Segmento" id="Segmento" class="form__input form__input--segmento" placeholder="Segmento">
-      <input type="submit" class="form__input form__input--submit" name="Button" value="QUERO TER MEU PRÓPRIO SITE">
+      <div class="form__box form__box--nome">
+        <input type="text" id="nome" name="nome" required placeholder="Nome">
+      </div>
+      <div class="form__box form__box--email">
+        <input type="email" id="email" name="email" required placeholder="Email">
+      </div>
+      <div class="form__box form__box--whatsapp">
+        <input type="text"  id="whatsapp" required placeholder="WhatsApp">
+      </div>
+      <div class="form__box form__box--segmento">
+        <input id="Segmento" disabled value="Segmento">
+        <button>
+          <img src="./assets/img/arrow.png" alt="">
+        </button>
+      </div>
+      <div data-active='' class="form__box form__box--dropdown">
+        <ul>
+          <li>Serviço</li>
+          <li>Varejo</li>
+          <li>Indústria</li>
+          <li>E-commerce</li>
+          <li>SAAS</li>
+          <li>Educação</li>
+          <li>Outros</li>
+        </ul>
+      </div>
+      <input type="submit" class="form__box form__box--submit" name="Button" value="QUERO TER MEU PRÓPRIO SITE">
 
     </form>
   </section>
