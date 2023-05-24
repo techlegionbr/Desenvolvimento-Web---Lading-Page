@@ -1,200 +1,50 @@
-body {
-  background-color: var(--color-primary);
-}
-
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.header__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 20px;
-}
-
-.header__content img {
-  max-width: 260px;
-}
-
-.header__content .menu nav ul {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.header__content .menu nav ul a {
-  font-size: 1.5rem;
-  position: relative;
-}
-
-.header__content .menu nav ul a::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-  transition: 0.3s;
-  margin-top: 2px;
-}
-
-.header__content .menu nav a:hover::after {
+#home{
+  background:var(--color-primary);
   width: 100%;
-  background: var(--color-secondary);
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
-
-.menu__mobile {
-  display: none;
-  flex-direction: column;
-  gap: 8px;
-  cursor: pointer;
+#home #content{
+  width:1000px;
+  margin-right: 20px;
+  margin-left: 20px;
+  display:flex;
+  gap:45px;
 }
-
-.menu__mobile div {
-  width: 30px;
-  height: 2px;
-  background-color: #fff;
+#home #content #description{
+  width: 60%;
+}
+#home #content #description h1{
+  font-size: 40px;
+}
+#home #content #description h2{
+  color: var(--color-third);
+}
+#home #content form{
+  background: #13194b;
+  border-radius: 14px;
+  width: 40%;
+  border:3px solid #ffffff0c;
+  padding:30px;
+}
+#home #content form input{
+  width:100%;
   border-radius: 2px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  position: absolute;
-  right: 100px;
-  top: 200px;
-  gap: 20px;
-}
-
-.form__box {
-  height: 50px;
-  border-radius: 5px;
   border: none;
-  background-color: #ffffff3d;
-  color: #ffffffd2;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  background: #00ddff53;
+  padding: 7px 15px;
+  margin-bottom: 10px; 
 }
-
-.form__box input {
-  background: none;
-  padding: 10px 10px 10px 20px;
-  width: 100%;
-  height: 100%;
-  border: none;
-  color: #ffffffd2;
-  font-size: 15px;
-  font-weight: bold;
+#home #content form input::placeholder{
+  color:#ffffffb7;
 }
-
-.form__box input::placeholder {
-  color: #ffffffbd;
-}
-
-.form__box--segmento {
-  display: flex;
-  align-items: center;
-  line-height: 50px;
-}
-.form__box--segmento button{
-  border: none;
-  background: none;
-  position: absolute;
-  right: 20px;
-  cursor: pointer;
-}
-.form__box--segmento button img{
-  transition: all .5s;
-}
-.form__box--segmento input{
-  cursor:pointer;
-}
-.form__box--dropdown{
-  height: 250px;
-  width: 500px;
-  padding: 10px;
-  position: absolute;
-  background-color: #022969;
-  transition: all .2s;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  border: solid 1px #fff;
-  font-weight: bold;
-  z-index: -1;
-}
-.form__box--dropdown ul{
-  width: 100%;
-  position: absolute;
-}
-.form__box--dropdown ul li{
-  padding: 5px 0px 5px 15px;
-  transition: all .3s ;
-  margin-bottom: 5px;
-}
-.form__box--dropdown ul li:hover{
-  background-color: #033c97 ;
-  border-left: 5px solid var(--color-third);
-  
-}
-.selected{
-  background-color: var(--color-third);
-}
-
- .appear{
-  top: 280px;
-  opacity: 1;
-  z-index: 0 !important;
-
- }
-.disappear {
-  top: 250px;
-  opacity: 0;
-}
-
-.form__box--submit {
-  background-color: var(--color-third);
-  font-weight: bold;
-  transition: all .5s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form__box--submit:hover {
-  background-color: #033c97;
-}
-
-@media (max-width: 880px) {
-  .header__content {
-    flex-wrap: wrap;
-
-    justify-content: center;
-  }
-
-  .menu {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    max-width: 480px;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .menu__mobile {
-    display: flex;
-  }
-
-  .header__content {
-    justify-content: space-between;
-  }
+#home #content form button{
+  width:100%;
+  background: var(--color-secondary);
+  border:none;
+  border-radius: 2px;
+  padding:8px;
+  color:var(--color-light);
 }
