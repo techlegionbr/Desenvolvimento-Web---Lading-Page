@@ -1,10 +1,10 @@
-:root {
-  --font-montserrat: "Montserrat", sans-serif;
-  --color-primary: #0c1137;
-  --color-secundary: #00dbff;
-  --color-third: #0061ff;
-
-  --color-light: #fff;
+:root{
+  --font-mont:Montserrat, sans-serif;
+  --font-pop:Poppins, sans-serif;
+  --color-primary:#0C1137; 
+  --color-secondary:#0061FF;
+  --color-third:#00DBFF;
+  --color-light:#FFFFFF;
 }
 
 * {
