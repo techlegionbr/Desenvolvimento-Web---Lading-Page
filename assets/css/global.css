@@ -1,3 +1,4 @@
+
 :root{
   --font-mont:Montserrat, sans-serif;
   --font-pop:Poppins, sans-serif;
@@ -5,7 +6,6 @@
   --color-secondary:#0061FF;
   --color-third:#00DBFF;
   --color-light:#FFFFFF;
-}
 
 * {
   margin: 0;
@@ -25,4 +25,9 @@ a {
 
 ul {
   list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
