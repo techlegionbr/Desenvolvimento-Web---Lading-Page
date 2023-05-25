@@ -132,3 +132,8 @@
 .form__box--submit:hover {
   background-color:var(--color-secondary);
 }
+
+.section2{
+  height: 100vh;
+  background-color: var(--color-primary);
+}

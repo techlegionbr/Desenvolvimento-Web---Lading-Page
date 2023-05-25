@@ -57,10 +57,10 @@ const selected = (event)=>{
 
 // Function that checks if the select value was selected correctly
 const checkValue = (event)=>{
-    if(!SEGMENT.firstElementChild.disabled){
-        SEGMENT.firstElementChild.disabled = true;
-    }else{
+    if(SEGMENT.firstElementChild.disabled){
         SEGMENT.firstElementChild.disabled = false;
+    }else{
+        SEGMENT.firstElementChild.disabled = true;
     }
 }
 
