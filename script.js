@@ -1,51 +1,77 @@
-const segment = document.querySelector(".form__box--segmento");
+// Consts
+const SEGMENT = document.querySelector(".form__box--segmento");
 const DROPDOWN = document.querySelector(".form__box--dropdown");
-const ARROW = document.querySelector(".form__box--segmento button img")
+const ARROW = document.querySelector(".form__box--segmento button i")
 const LIST = document.querySelectorAll(".form__box--dropdown ul li")
-const FORM = document.querySelector(".form");
+const FORM_WHATS = document.querySelector(".form__box--whatsapp input");
+const SUBMIT = document.querySelector(".form__box--submit");
 
+// Marker for formatting the Whatsapp number
+VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 9 9999-9999");
 
+// Functions
 
-
-
-const showDropdown = ()=>{
-    if(DROPDOWN.dataset.active === "active"){
+// Function that shows or hides the dropdown
+const showDropdown = () => {
+    if (DROPDOWN.dataset.active === "active") {
         disappearDropdown()
-    }else{
+    } else {
         DROPDOWN.classList.remove('disappear');
         DROPDOWN.classList.add('appear');
         ARROW.style.transform = "rotate(180deg)";
         DROPDOWN.dataset.active = 'active';
     }
 }
-const disappearDropdown = ()=>{
+
+// Function that hides the dropdown
+const disappearDropdown = () => {
     DROPDOWN.classList.add('disappear');
     DROPDOWN.classList.remove('appear');
     ARROW.style.transform = "rotate(0deg)";
     DROPDOWN.dataset.active = '';
 }
 
-const selectElement = ()=>{
-    LIST.forEach((e)=>{
-        e.addEventListener('click', ()=>{
-            segment.firstElementChild.setAttribute('value', e.textContent);
-            LIST.forEach((elem)=>{
-                if(elem.textContent === e.textContent){
-                    elem.classList.add('selected');
-                    disappearDropdown();
-                }else{
-                    elem.classList.remove('selected');
-                }
-                
-            })
-        })
-    })
+// Function that identifies a click outside the dropdown and hides it
+const clickOutsideDropdown = (event) => {
+    if (!SEGMENT.contains(event.target) && !DROPDOWN.contains(event.target)) {
+        disappearDropdown();
+    }
 }
 
-segment.addEventListener('click', () => {
-    showDropdown();
-    selectElement();
+// Function that selects one of the select options and removes previously selected options
+const selected = (event)=>{
+    if(!event.target.classList.contains('selected')){
+        
+        LIST.forEach((e)=>{
+            e.classList.remove('selected')
+        })
 
-    
+        event.target.classList.add('selected');
+        SEGMENT.firstElementChild.value = event.target.textContent;
+        disappearDropdown();
+    }else{
+        event.target.classList.remove('selected');
+        SEGMENT.firstElementChild.value = '';
+    }
+}
+
+// Function that checks if the select value was selected correctly
+const checkValue = (event)=>{
+    if(!SEGMENT.firstElementChild.disabled){
+        SEGMENT.firstElementChild.disabled = true;
+    }else{
+        SEGMENT.firstElementChild.disabled = false;
+    }
+}
+
+//Events 
+
+// Event that starts the select
+SEGMENT.addEventListener('click', () => {
+    showDropdown();
+    checkValue();
 });
+
+// Click event outside the dropdown
+document.addEventListener('click', clickOutsideDropdown);
 
