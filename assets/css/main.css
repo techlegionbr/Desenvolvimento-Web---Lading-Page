@@ -1,34 +1,47 @@
-#home{
-  background:var(--color-primary);
+#home {
+  background-image: url(/assets/imgs/BackgroundBlue.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   min-height: 100vh;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
-#home .home__content{
-  width:1000px;
+
+#home .home__content {
+  width: 80%;
   margin-right: 20px;
   margin-left: 20px;
-  display:flex;
-  gap:45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   position: relative;
+  justify-content: space-between;
+
 }
-#home .home__content #description{
-  width: 60%;
+
+.home__content__box {
+  width: 45%;
 }
-#home .home__content #description h1{
+.home__content__box--form{
+  display: flex;
+  justify-content: end;
+}
+
+#home .home__content #description h1 {
   font-size: 40px;
 }
-#home .home__content #description h2{
+
+#home .home__content #description h2 {
   color: var(--color-third);
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 350px;
-  position: absolute;
+  position: relative;
+  width: 450px;
   right: 0;
   gap: 10px;
 }
@@ -37,11 +50,12 @@
   height: 50px;
   border-radius: 5px;
   border: none;
-  background-color: #ffffff3d;
-  color: #ffffffd2;
+  background-color: #ffffff70;
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .form__box input {
@@ -50,21 +64,23 @@
   width: 100%;
   height: 100%;
   border: none;
-  color: #ffffffd2;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
 }
 
 .form__box input::placeholder {
-  color: #ffffffbd;
+  color: #ffffff;
 }
 
 .form__box--segmento {
   display: flex;
   align-items: center;
   line-height: 50px;
+  position: relative;
 }
-.form__box--segmento button{
+
+.form__box--segmento button {
   border: none;
   background: none;
   position: absolute;
@@ -72,68 +88,94 @@
   color: #fff;
   cursor: pointer;
 }
-.form__box--segmento button i{
+
+.form__box--segmento button i {
   transition: all .5s;
 }
-.form__box--segmento input{
-  cursor:pointer;
+
+.form__box--segmento input {
+  cursor: pointer;
 }
-.form__box--dropdown{
+
+.form__box--dropdown {
   height: 220px;
-  width: 350px;
+  width: 100%;
   padding: 10px;
   position: absolute;
-  background-color: #022969;
+ background-color: #101747;;
   transition: all .2s;
   opacity: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   border: solid 1px #fff;
   font-weight: bold;
-  z-index: -1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
-.form__box--dropdown ul{
+
+.form__box--dropdown ul {
   width: 100%;
   position: absolute;
 }
-.form__box--dropdown ul li{
+
+.form__box--dropdown ul li {
   padding: 2px 0px 2px 15px;
-  transition: all .3s ;
+  transition: all .3s;
 }
-.form__box--dropdown ul li:hover{
-  background-color: #033c97 ;
+
+.form__box--dropdown ul li:hover {
+  background-color: #033c97;
   border-left: 5px solid var(--color-third);
-  
-}
-.selected{
-  background-color: #03b6d1;
+
 }
 
- .appear{
+.selected {
+  background-color: var(--color-secondary);
+}
+
+.appear {
   top: 240px;
-  opacity: 1;
-  z-index: 0 !important;
+  opacity: 0.9;
+  z-index: 1;
+}
 
- }
 .disappear {
-  top: 250px;
+  top: 230px;
   opacity: 0;
 }
 
 .form__box--submit {
-  background:#033c97;
+  background: #033c97;
   font-weight: bold;
   transition: all .5s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all .5s ease;
+  font-family: var(--font-pop);
 }
 
 .form__box--submit:hover {
-  background-color:var(--color-secondary);
+  background-color: var(--color-secondary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
-.section2{
+.section2 {
   height: 100vh;
   background-color: var(--color-primary);
+}
+
+@media (max-width:1000px) {
+  #home{
+    padding: 90px 0px 0px 20px;
+  }
+  .home__content__box {
+    width: 100%;
+    align-items: center;
+  }
+  .home__content__box--form{
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
 }

@@ -14,17 +14,27 @@ VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 
 // Function that shows or hides the dropdown
 const showDropdown = () => {
     if (DROPDOWN.dataset.active === "active") {
+        SEGMENT.firstElementChild.disabled = false;
         disappearDropdown()
     } else {
+        DROPDOWN.style.display = "flex";
+        setTimeout(()=>{
         DROPDOWN.classList.remove('disappear');
         DROPDOWN.classList.add('appear');
         ARROW.style.transform = "rotate(180deg)";
         DROPDOWN.dataset.active = 'active';
+        SEGMENT.firstElementChild.disabled = true;
+        }, 100);
+        
     }
 }
 
 // Function that hides the dropdown
 const disappearDropdown = () => {
+    setTimeout(()=>{
+        DROPDOWN.style.display = "flex";
+    }, 100);
+    
     DROPDOWN.classList.add('disappear');
     DROPDOWN.classList.remove('appear');
     ARROW.style.transform = "rotate(0deg)";
@@ -39,29 +49,31 @@ const clickOutsideDropdown = (event) => {
 }
 
 // Function that selects one of the select options and removes previously selected options
-const selected = (event)=>{
-    if(!event.target.classList.contains('selected')){
-        
-        LIST.forEach((e)=>{
+const selected = (event) => {
+    if (!event.target.classList.contains('selected')) {
+
+        LIST.forEach((e) => {
             e.classList.remove('selected')
         })
 
         event.target.classList.add('selected');
         SEGMENT.firstElementChild.value = event.target.textContent;
         disappearDropdown();
-    }else{
+    } else {
         event.target.classList.remove('selected');
         SEGMENT.firstElementChild.value = '';
+        SEGMENT.firstElementChild.disabled = false;
     }
 }
 
 // Function that checks if the select value was selected correctly
-const checkValue = (event)=>{
-    if(SEGMENT.firstElementChild.disabled){
+const checkValue = () => {
+    if (SEGMENT.firstElementChild.value === "") {
         SEGMENT.firstElementChild.disabled = false;
-    }else{
+    } else {
         SEGMENT.firstElementChild.disabled = true;
     }
+    console.log(SEGMENT.firstElementChild.value)
 }
 
 //Events 
@@ -74,4 +86,3 @@ SEGMENT.addEventListener('click', () => {
 
 // Click event outside the dropdown
 document.addEventListener('click', clickOutsideDropdown);
-
