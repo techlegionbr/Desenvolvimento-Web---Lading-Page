@@ -5,6 +5,8 @@ const ARROW = document.querySelector(".form__box--segmento button i")
 const LIST = document.querySelectorAll(".form__box--dropdown ul li")
 const FORM_WHATS = document.querySelector(".form__box--whatsapp input");
 const SUBMIT = document.querySelector(".form__box--submit");
+const FORM_BOXS = document.querySelectorAll(".form__box");
+
 
 // Marker for formatting the Whatsapp number
 VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 9 9999-9999");
@@ -14,27 +16,25 @@ VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 
 // Function that shows or hides the dropdown
 const showDropdown = () => {
     if (DROPDOWN.dataset.active === "active") {
-        SEGMENT.firstElementChild.disabled = false;
         disappearDropdown()
     } else {
         DROPDOWN.style.display = "flex";
-        setTimeout(()=>{
-        DROPDOWN.classList.remove('disappear');
-        DROPDOWN.classList.add('appear');
-        ARROW.style.transform = "rotate(180deg)";
-        DROPDOWN.dataset.active = 'active';
-        SEGMENT.firstElementChild.disabled = true;
+        setTimeout(() => {
+            DROPDOWN.classList.remove('disappear');
+            DROPDOWN.classList.add('appear');
+            ARROW.style.transform = "rotate(180deg)";
+            DROPDOWN.dataset.active = 'active';
         }, 100);
-        
+
     }
 }
 
 // Function that hides the dropdown
 const disappearDropdown = () => {
-    setTimeout(()=>{
-        DROPDOWN.style.display = "flex";
+    setTimeout(() => {
+        DROPDOWN.style.display = "none";
     }, 100);
-    
+
     DROPDOWN.classList.add('disappear');
     DROPDOWN.classList.remove('appear');
     ARROW.style.transform = "rotate(0deg)";
@@ -62,27 +62,44 @@ const selected = (event) => {
     } else {
         event.target.classList.remove('selected');
         SEGMENT.firstElementChild.value = '';
-        SEGMENT.firstElementChild.disabled = false;
     }
 }
 
 // Function that checks if the select value was selected correctly
 const checkValue = () => {
-    if (SEGMENT.firstElementChild.value === "") {
-        SEGMENT.firstElementChild.disabled = false;
-    } else {
-        SEGMENT.firstElementChild.disabled = true;
+    const fullBoxes = Array.from(FORM_BOXS);
+    
+    const emptyBoxs = fullBoxes.filter(e => e.firstElementChild.value == "");
+    
+    if (emptyBoxs.length != 0) {
+        emptyBoxs.forEach((e) => {
+            e.classList.add("invalid");
+            setTimeout(() => {
+                e.classList.remove("invalid");
+            }, 600);
+        })
+    }else{
+        document.querySelector('form').submit();
     }
-    console.log(SEGMENT.firstElementChild.value)
 }
+
+
 
 //Events 
 
 // Event that starts the select
 SEGMENT.addEventListener('click', () => {
     showDropdown();
-    checkValue();
 });
 
 // Click event outside the dropdown
 document.addEventListener('click', clickOutsideDropdown);
+
+document.querySelector(".form").addEventListener("submit", function (event) {
+    event.preventDefault();
+  
+})
+
+SUBMIT.addEventListener('click', checkValue);
+
+
