@@ -1,4 +1,5 @@
 // Consts
+const HEADER = document.querySelector("header");
 const SEGMENT = document.querySelector(".form__box--segmento");
 const DROPDOWN = document.querySelector(".form__box--dropdown");
 const ARROW = document.querySelector(".form__box--segmento button i")
@@ -12,6 +13,15 @@ const FORM_BOXS = document.querySelectorAll(".form__box");
 VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 9 9999-9999");
 
 // Functions
+
+const appearMenu = ()=>{
+    const links =  document.querySelector('myLinks');
+    if(links.style.display === "none"){
+        links.style.display = "flex";
+    }else{
+        links.style.display = "none";
+    }
+}
 
 // Function that shows or hides the dropdown
 const showDropdown = () => {
@@ -95,11 +105,23 @@ SEGMENT.addEventListener('click', () => {
 // Click event outside the dropdown
 document.addEventListener('click', clickOutsideDropdown);
 
+// Event that removes the form's default submit
 document.querySelector(".form").addEventListener("submit", function (event) {
     event.preventDefault();
   
 })
 
+// Event that to validate the form values when clicking submit
 SUBMIT.addEventListener('click', checkValue);
+
+// Event that adds a background to the Header or removes it according to the scroll movement
+document.addEventListener('scroll', function (){
+    if(window.pageYOffset >= 100){
+        HEADER.classList.add('appearHeader');
+    }else{
+        HEADER.classList.remove('appearHeader');
+    }
+})
+
 
 

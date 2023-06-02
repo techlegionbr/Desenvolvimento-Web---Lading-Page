@@ -8,6 +8,11 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
+  transition: background .2s ease-in-out;
+}
+.appearHeader{
+  backdrop-filter: blur(5px);
+  background-color: #0c1137d2;
 }
 header #content {
   display: flex;
@@ -51,6 +56,8 @@ header #content #button-hamburguer {
   display: none;
   color:var(--color-light);
 }
+
+
 @media (max-width: 794px) {
   header #content nav {
     display: none;
