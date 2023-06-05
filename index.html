@@ -32,16 +32,26 @@
           <img src="/assets/imgs/Logo_Tech_Legion_H_02_Blue (1).png" alt="logo da techlegion" width="200" />
         </div>
       </a>
-      <nav class="appearMenu">
+      <nav>
         <a>Home</a>
         <a>Serviços</a>
         <a>Sobre</a>
         <a>Dúvidas</a>
         <a>Contato</a>
       </nav>
-      <button id="button-hamburguer" onclick="appearMenu()"><i class="bx bx-menu"></i></button>
+      <button id="button-hamburguer" onclick="handleSideMenu()"><i class="bx bx-menu"></i></button>
     </div>
   </header>
+  <div class="lateralMenu">
+    <i class='bx bx-chevron-right' onclick="handleSideMenu()"></i>
+    <nav>
+      <a><span>Home</span></a>
+      <a><span>Serviços</span></a>
+      <a><span>Sobre</span></a>
+      <a><span>Dúvidas</span></a>
+      <a><span>Contato</span></a>
+    </nav>
+  </div>
   <section id="home">
     <div class="home__content">
       <div id="description" class="home__content__box home__content__box--description">
@@ -64,10 +74,11 @@
             <input type="email" id="email" name="email" autocomplete="off" required placeholder="Email">
           </div>
           <div class="form__box form__box--whatsapp">
-            <input type="text" id="whatsapp" autocomplete="off" required placeholder="WhatsApp" data-inputmask="'mask': '(99) 9999-9999'">
+            <input type="text" id="whatsapp" autocomplete="off" required placeholder="WhatsApp"
+              data-inputmask="'mask': '(99) 9999-9999'">
           </div>
           <div class="form__box form__box--segmento">
-            <input type="text" id="Segmento" required disabled  placeholder="Segmento">
+            <input type="text" id="Segmento" required disabled placeholder="Segmento">
             <button>
               <i class="bx bxs-down-arrow"></i>
             </button>

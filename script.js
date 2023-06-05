@@ -7,19 +7,24 @@ const LIST = document.querySelectorAll(".form__box--dropdown ul li")
 const FORM_WHATS = document.querySelector(".form__box--whatsapp input");
 const SUBMIT = document.querySelector(".form__box--submit");
 const FORM_BOXS = document.querySelectorAll(".form__box");
-
-
+const LATERAL_MENU = document.querySelector(".lateralMenu");
+let buttonHamburguer =  document.getElementById('button-hamburguer');
 // Marker for formatting the Whatsapp number
 VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 9 9999-9999");
 
 // Functions
 
-const appearMenu = ()=>{
-    const links =  document.querySelector('myLinks');
-    if(links.style.display === "none"){
-        links.style.display = "flex";
-    }else{
-        links.style.display = "none";
+const handleSideMenu = ()=>{
+   LATERAL_MENU.style.right = LATERAL_MENU.style.right === "0%" ? "-100%" : "0%";
+   buttonHamburguer.style.display = LATERAL_MENU.style.right === "0%" ? "none" : "inline-block";
+}
+
+// Function that identifies a click outside the lateral menu and hides it
+const clickOutsideLateralMenu = (event)=>{
+    if(!LATERAL_MENU.contains(event.target) && !buttonHamburguer.contains(event.target)){
+        if(LATERAL_MENU.style.right === "0%"){
+            handleSideMenu();
+        }
     }
 }
 
@@ -104,6 +109,9 @@ SEGMENT.addEventListener('click', () => {
 
 // Click event outside the dropdown
 document.addEventListener('click', clickOutsideDropdown);
+
+// Click event outside the Lateral Menu
+document.addEventListener('click', clickOutsideLateralMenu);
 
 // Event that removes the form's default submit
 document.querySelector(".form").addEventListener("submit", function (event) {
