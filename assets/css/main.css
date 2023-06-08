@@ -18,6 +18,7 @@ body::-webkit-scrollbar-thumb{
   align-items: center;
   justify-content: center;
   border-bottom: solid 1px #0062ff9c;
+  font-weight: bold;
 }
 
 #home .home__content {
@@ -220,7 +221,8 @@ input:focus {
 
 .lateralMenu{
   background-color: #101747dc;
-  position: fixed;
+  position: absolute;
+  top: 0;
   right: -100%;
   z-index: 2;
   height: 100vh;
