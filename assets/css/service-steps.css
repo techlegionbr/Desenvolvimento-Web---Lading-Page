@@ -18,7 +18,13 @@
 
 .steps__content--title {
     position: absolute;
-    margin: 50px 0px 10px 0px
+    margin: 50px 0px 10px 0px;
+    line-height: px;
+}
+
+.steps__content--title h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
 }
 
 .steps__content--title span {
@@ -27,12 +33,13 @@
 
 .steps__content--title p {
     font-size: 15px;
+    margin-top: 1rem;
 }
 
 .steps__content--carousel {
     height: 300px;
-    width:770px;
-    margin-top: 30px;
+    width: 770px;
+    margin-top: 80px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,13 +49,14 @@
     justify-content: center;
     overflow-y: visible;
 
+
 }
 
 .steps__content--carousel::-webkit-scrollbar {
     display: none;
 }
 
-.steps__content--carousel > i {
+.steps__content--carousel>i {
     background-color: #00dbff;
     border-radius: 50%;
     position: absolute;
@@ -64,11 +72,11 @@
 }
 
 .arrow-left {
-    left: -70;
+    left: -80;
 }
 
 .arrow-right {
-    right: -70;
+    right: -80;
 }
 
 .carousel__gallery {
@@ -100,17 +108,19 @@
     z-index: 0;
 }
 
-.carousel__gallery div i{
+.carousel__gallery div i {
     font-size: 50px;
     margin-bottom: 30px;
-    
+
 }
-.carousel__gallery div h4{
+
+.carousel__gallery div h4 {
     font-size: 20px;
     margin-bottom: 10px;
     color: #00dbff;
 }
-.carousel__gallery div span{
+
+.carousel__gallery div span {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -126,8 +136,8 @@
     font-weight: 800;
 }
 
-.carousel__card > p{
-    font-weight:400;
+.carousel__card>p {
+    font-weight: 400;
     font-size: 15px;
 }
 
@@ -137,32 +147,37 @@
     height: 350px;
     background-color: #1f2c92;
     border: solid 1px #ffffff;
-    box-shadow: 5px 5px 5px  #000000b6;
+    box-shadow: 5px 5px 5px #000000b6;
 }
-@media (max-width:1010px){
-    .carousel__gallery{
+
+@media (max-width:1010px) {
+    .carousel__gallery {
         width: 530px;
     }
-    .steps__content--carousel{
-        width:530px;
-    }
-}
-@media (max-width:700px){
-    .carousel__gallery{
-        width: 260px;
-    }
-    .steps__content--carousel{
-        width:260px ;
-    }
-    .carousel__card{
-        opacity:1;
-    }
-    .arrow-left {
-        left: -55;
-    }
-    
-    .arrow-right {
-        right: -55;
+
+    .steps__content--carousel {
+        width: 530px;
     }
 }
 
+@media (max-width:700px) {
+    .carousel__gallery {
+        width: 260px;
+    }
+
+    .steps__content--carousel {
+        width: 260px;
+    }
+
+    .carousel__card {
+        opacity: 1;
+    }
+
+    .arrow-left {
+        left: -70;
+    }
+
+    .arrow-right {
+        right: -70;
+    }
+}
