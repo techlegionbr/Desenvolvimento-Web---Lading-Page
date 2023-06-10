@@ -2,27 +2,27 @@
 const HEADER = document.querySelector("header");
 const SEGMENT = document.querySelector(".form__box--segmento");
 const DROPDOWN = document.querySelector(".form__box--dropdown");
-const ARROW = document.querySelector(".form__box--segmento button i")
-const LIST = document.querySelectorAll(".form__box--dropdown ul li")
+const ARROW = document.querySelector(".form__box--segmento button i");
+const LIST = document.querySelectorAll(".form__box--dropdown ul li");
 const FORM_WHATS = document.querySelector(".form__box--whatsapp input");
 const SUBMIT = document.querySelector(".form__box--submit");
 const FORM_BOXS = document.querySelectorAll(".form__box");
 const LATERAL_MENU = document.querySelector(".lateralMenu");
-let buttonHamburguer =  document.getElementById('button-hamburguer');
+const BUTTON_HAMBURGUER = document.getElementById('button-hamburguer');
 // Marker for formatting the Whatsapp number
 VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 9 9999-9999");
 
 // Functions
 
-const handleSideMenu = ()=>{
-   LATERAL_MENU.style.right = LATERAL_MENU.style.right === "0%" ? "-100%" : "0%";
-   buttonHamburguer.style.display = LATERAL_MENU.style.right === "0%" ? "none" : "inline-block";
+const handleSideMenu = () => {
+    LATERAL_MENU.style.right = LATERAL_MENU.style.right === "0%" ? "-100%" : "0%";
+    BUTTON_HAMBURGUER.style.display = LATERAL_MENU.style.right === "0%" ? "none" : "inline-block";
 }
 
 // Function that identifies a click outside the lateral menu and hides it
-const clickOutsideLateralMenu = (event)=>{
-    if(!LATERAL_MENU.contains(event.target) && !buttonHamburguer.contains(event.target)){
-        if(LATERAL_MENU.style.right === "0%"){
+const clickOutsideLateralMenu = (event) => {
+    if (!LATERAL_MENU.contains(event.target) && !BUTTON_HAMBURGUER.contains(event.target)) {
+        if (LATERAL_MENU.style.right === "0%") {
             handleSideMenu();
         }
     }
@@ -83,9 +83,9 @@ const selected = (event) => {
 // Function that checks if the select value was selected correctly
 const checkValue = () => {
     const fullBoxes = Array.from(FORM_BOXS);
-    
+
     const emptyBoxs = fullBoxes.filter(e => e.firstElementChild.value == "");
-    
+
     if (emptyBoxs.length != 0) {
         emptyBoxs.forEach((e) => {
             e.classList.add("invalid");
@@ -93,7 +93,7 @@ const checkValue = () => {
                 e.classList.remove("invalid");
             }, 600);
         })
-    }else{
+    } else {
         document.querySelector('form').submit();
     }
 }
@@ -116,20 +116,19 @@ document.addEventListener('click', clickOutsideLateralMenu);
 // Event that removes the form's default submit
 document.querySelector(".form").addEventListener("submit", function (event) {
     event.preventDefault();
-  
+
 })
 
 // Event that to validate the form values when clicking submit
 SUBMIT.addEventListener('click', checkValue);
 
 // Event that adds a background to the Header or removes it according to the scroll movement
-document.addEventListener('scroll', function (){
-    if(window.pageYOffset >= 100){
+document.addEventListener('scroll', function () {
+    if (window.pageYOffset >= 100) {
         HEADER.classList.add('appearHeader');
-    }else{
+    } else {
         HEADER.classList.remove('appearHeader');
     }
 })
-
 
 

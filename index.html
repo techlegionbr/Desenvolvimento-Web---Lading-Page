@@ -9,17 +9,18 @@
   <!--Javascript Link-->
   <script src="//unpkg.com/vanilla-masker@1.1.1/lib/vanilla-masker.js"></script>
   <script src="script.js" defer></script>
+  <script src="carousel.js" defer></script>
 
   <!--CSS Link-->
   <link rel="stylesheet" href="/assets/css/global.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/service-steps.css">
   <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;800&family=Poppins:wght@800&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   <!--Icon Link-->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
@@ -41,17 +42,17 @@
       </nav>
       <button id="button-hamburguer" onclick="handleSideMenu()"><i class="bx bx-menu"></i></button>
     </div>
+    <div class="lateralMenu">
+      <i class='bx bx-chevron-right' onclick="handleSideMenu()"></i>
+      <nav>
+        <a><span>Home</span></a>
+        <a><span>Serviços</span></a>
+        <a><span>Sobre</span></a>
+        <a><span>Dúvidas</span></a>
+        <a><span>Contato</span></a>
+      </nav>
+    </div>
   </header>
-  <div class="lateralMenu">
-    <i class='bx bx-chevron-right' onclick="handleSideMenu()"></i>
-    <nav>
-      <a><span>Home</span></a>
-      <a><span>Serviços</span></a>
-      <a><span>Sobre</span></a>
-      <a><span>Dúvidas</span></a>
-      <a><span>Contato</span></a>
-    </nav>
-  </div>
   <section id="home">
     <div class="home__content">
       <div id="description" class="home__content__box home__content__box--description">
@@ -100,6 +101,90 @@
     </div>
   </section>
   <section class="section2"></section>
+  <section id="steps">
+    <div class="steps__content">
+      <div class="steps__content--title">
+        <h1>ETAPAS PARA
+          <br>
+          <span>DESENVOLVER O SEU SITE</span>
+        </h1>
+          <p>Todo o processo pensado para o melhor resultado do seu site</p>
+      </div>
+      <div class="steps__content--carousel">
+
+        <i class='arrow-left bx bx-chevron-left' onclick="handleSideMenu()"></i>
+        <i class='arrow-right bx bx-chevron-right' onclick="handleSideMenu()"></i>
+
+        <div class="carousel__gallery">
+          <div class="carousel__card current_item" card-carrossel>
+            <span>
+              1º
+            </span>
+            <i class='bx bx-notepad'></i>
+            <h4>ESPECIFICAÇÕES</h4>
+            <p>Levantamento e documentação das necessidades do cliente para atender o escopo do projeto.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              2º
+            </span>
+            <i class='bx bx-palette'></i>
+            <h4>UX/UI DESIGN</h4>
+            <p>Entendimento e criação da interface de um software, sistema ou mobile validando a usabilidade a essência
+              de sua marca.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              3º
+            </span>
+            <i class='bx bx-line-chart'></i>
+            <h4>PLANEJAMENTO</h4>
+            <p>Preparação para iniciar a construção do projeto, estabelecendo métricas e planos que serão acompanhados
+              ao longo do desenvolvimento.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              4º
+            </span>
+            <i class='bx bx-code-block'></i>
+            <h4>CONSTRUÇÃO</h4>
+            <p>Etapa onde a equipe de codificação executa as demandas utilizando métodos ágeis, que aumentam o foco e a
+              produtividade ao longo do projeto.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              5º
+            </span>
+            <i class='bx bx-check-circle'></i>
+            <h4>QUALIDADE</h4>
+            <p>Testes integrados e automatizados, além de dupla checagem para aprovação e subida de pull requests,
+              garantindo qualidade a seu sistema.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              6º
+            </span>
+            <i class='bx bx-search-alt-2'></i>
+            <h4>HOMOLOGAÇÃO</h4>
+            <p>Etapa ocorre durante e ao final do desenvolvimento de todo o projeto, de forma a garantir que todos os
+              requisitos foram validados.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              7º
+            </span>
+            <i class='bx bx-desktop'></i>
+            <h4>IMPLANTAÇÃO</h4>
+            <p>As funcionalidades desenvolvidas e aprovadas pelo cliente na fase de homologação, serão colocados em
+              produção efetiva.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
 
 
 </body>
