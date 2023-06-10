@@ -1,4 +1,8 @@
-#content{
+#services{
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+#services #content{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -8,6 +12,7 @@
     gap: 60px;
     padding: 40px;
     max-width: 1000px;
+    margin: 0 auto;
 }
 .card{
     display: flex;
@@ -22,6 +27,9 @@
     height: 180px;
     width:230px;
 }
+.card h2{
+    margin-bottom: 30px;   
+}
 .card:hover{
     transform: translateY(-5px);
     cursor: pointer;
@@ -34,4 +42,16 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
+    width: 30px;
 }
+.title{
+    text-align: center;
+    color:var(--color-light);
+    line-height: 30px;
+}
+.title h1{
+    font-size: 31px;
+    color: var(--color-third);
+    line-height: 70px;
+}
+
