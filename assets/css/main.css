@@ -1,14 +1,16 @@
 body::-webkit-scrollbar{
-  background-color: #fff;
+  background-color: #101747;
+  border-radius: 5%;
+ 
   width: 5px;
 }
 body::-webkit-scrollbar-thumb{
-  background:linear-gradient(#0058ED, #101747);
+  background-color:#080c25;
   border-radius: 5px;
 }
 
 #home {
-  background-image: url(/assets/imgs/terra-primary.png);
+  background-image: url(/assets/imgs/terra-primary_auto_x2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

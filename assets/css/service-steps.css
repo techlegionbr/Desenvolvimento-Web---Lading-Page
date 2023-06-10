@@ -149,13 +149,20 @@
 }
 @media (max-width:700px){
     .carousel__gallery{
-        width: 270px;
+        width: 260px;
     }
     .steps__content--carousel{
-        width:270px ;
+        width:260px ;
     }
     .carousel__card{
         opacity:1;
+    }
+    .arrow-left {
+        left: -55;
+    }
+    
+    .arrow-right {
+        right: -55;
     }
 }
 
