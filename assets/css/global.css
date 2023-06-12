@@ -5,6 +5,7 @@
   --color-secondary: #0061ff;
   --color-third: #00dbff;
   --color-light: #ffffff;
+  --color-dark: #000 ; 
 }
 
 * {
