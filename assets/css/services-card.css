@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--font-mont);
-    gap: 60px;
+    gap: 45px;
     padding: 40px;
     max-width: 1000px;
     margin: 0 auto;
@@ -22,13 +22,14 @@
     padding: 20px;
     transition: all 0.3s ease-out;
     border-left: 5px solid var(--color-third);
-    background-color: var(--color-light);
+    background-color: #2e3569;
     position: relative;
     height: 180px;
     width:230px;
 }
 .card h2{
-    margin-bottom: 30px;   
+    margin-bottom: 30px;  
+    color: var(--color-light); 
 }
 .card:hover{
     transform: translateY(-5px);
