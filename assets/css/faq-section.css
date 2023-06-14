@@ -3,6 +3,10 @@
     display: flex;
     justify-content: center;
     border-bottom: solid 1px #0062ff9c;
+    background-image: url("/assets/imgs/foguetao-primary.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .faq__content {
@@ -23,11 +27,14 @@
 
 .faq__content__boxs--image {
     display: flex;
-    align-items: flex-start;
-}
-
-.faq__content__boxs--image img {
-    width: 400px;
+    /* align-items: flex-start; */
+     width: 400px;
+    height: 440px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-image: url(/assets/imgs/wepik-export-20230614223511mFi0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .faq__content__boxs--question {
@@ -37,12 +44,18 @@
 .faq__question {
     margin-top: 10px;
     background-color: #0062ff9c;
+    backdrop-filter: blur(10px);
     min-height: 70px;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
     padding: 0px 70px 0px 70px;
+    opacity: .8;
+    transition: .3s;
 
+}
+.faq__question:hover{
+    opacity: 1;
 }
 
 .question {
@@ -84,4 +97,11 @@
 .active {
     margin-top: 15px;
     height: 220px;
+}
+
+@media (max-width: 1290px){
+    .faq__content__boxs{
+        flex-direction: column;
+        align-items: center;
+    }
 }

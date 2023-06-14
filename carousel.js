@@ -40,15 +40,17 @@ QUESTIONS.forEach(e => {
                 e.querySelector('.answer').classList.remove("active");
                 e.dataset.active = "false";
                 e.querySelector("i").style.transform = "rotate(0deg)";
-
+                e.style.opacity = ".8";
             })
             e.querySelector("i").style.transform = "rotate(180deg)";
             e.querySelector('.answer').classList.add("active");
             e.dataset.active = "true";
+            e.style.opacity = "1";
         } else {
             e.querySelector("i").style.transform = "rotate(0deg)";
             e.querySelector('.answer').classList.remove("active");
             e.dataset.active = "false";
+            e.style.opacity = ".8";
         }
     })
 })
