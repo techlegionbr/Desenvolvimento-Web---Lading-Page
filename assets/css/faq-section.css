@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
+    
 }
 
 .faq__box {
@@ -26,9 +27,7 @@
 }
 
 .faq__content__boxs--image {
-    display: flex;
-    /* align-items: flex-start; */
-     width: 400px;
+    width: 400px;
     height: 440px;
     margin-top: 10px;
     border-radius: 5px;
@@ -103,5 +102,36 @@
     .faq__content__boxs{
         flex-direction: column;
         align-items: center;
+    }
+    .faq__content__boxs--question{
+        width: 100%;
+    }
+
+    .faq__content__boxs--image {
+        width: 100%;
+        height: 400px;
+        background-position:center;
+        background-size: cover;
+    }
+}
+@media (max-width: 700px){
+    .active{
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px){
+    .faq__content{
+        width: 90%;
+    }
+    .faq__question{
+        font-size: 15px;
+        padding: 10px 50px 10px 50px;
+    }
+    .active{
+        height: 350px;
+    }
+    .question>span{
+        left: 20;
     }
 }
