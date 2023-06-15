@@ -60,19 +60,22 @@
     display: none;
 }
 
-.steps__content--carousel>i {
-    background-color: #00dbff;
+.arrow-left, .arrow-right {
+    background-color: #2334b3;
     border-radius: 50%;
     position: absolute;
-    font-size: 50px;
-    opacity: 0.2;
+    font-size: 40px;
+    opacity: .5;
     z-index: 2;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    color: #00dbff;
+    padding: 8px;
 }
 
-.steps__content--carousel i:hover {
+.arrow-left:hover , .arrow-right:hover{
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .arrow-left {
@@ -135,7 +138,7 @@
     align-items: center;
     position: absolute;
     border-radius: 50%;
-    border: solid 1px #ffffff85;
+    border: solid 1.5px #00ddff9f;
     color: #00dbff;
     font-weight: 800;
 }
@@ -149,10 +152,10 @@
 .current_item {
     opacity: 1;
     height: 350px;
-    background-color: #1f2c92;
-    border: solid 1px #ffffff;
-    box-shadow: 5px 5px 5px #000000b6;
+    background-color: #17216e;
+    border: solid 2px #00ddff63;
 }
+
 
 @media (max-width:1010px) {
     .carousel__gallery {

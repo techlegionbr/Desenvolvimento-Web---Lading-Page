@@ -54,3 +54,17 @@ QUESTIONS.forEach(e => {
         }
     })
 })
+
+const centerCard = () => {
+    STEPS_CARDS[currentItem].scrollIntoView({
+        inline: "center",
+        behavior: "smooth",
+        block: "nearest"
+    })
+}
+
+const checkCurrendWidth = () => {
+    centerCard();
+}
+
+window.addEventListener('resize', checkCurrendWidth);
