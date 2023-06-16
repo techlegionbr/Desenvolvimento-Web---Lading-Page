@@ -30,7 +30,7 @@
     width: 400px;
     height: 440px;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-image: url(/assets/imgs/wepik-export-20230614223511mFi0.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -131,8 +131,8 @@
         width: 90%;
     }
     .faq__question{
-        font-size: 15px;
-        padding: 10px 50px 10px 50px;
+        font-size: 14px;
+        padding: 20px 30px 20px 50px;
     }
     .active{
         height: 350px;
