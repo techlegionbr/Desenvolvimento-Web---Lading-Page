@@ -278,6 +278,11 @@ input:focus {
   height: 100vh;
   background-color:white;
 }
+@media (max-width:1120px){
+  #home .home__content{
+    width: 90%;
+  }
+}
 
 @media (max-width:1000px) {
   #home {

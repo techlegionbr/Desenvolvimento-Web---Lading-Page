@@ -61,7 +61,12 @@ header #content #button-hamburguer {
   display: none;
   color:var(--color-light);
 }
+@media (max-width:1120px) {
+  header #content{
+    width: 90%;
+  } 
 
+}
 
 @media (max-width: 794px) {
   header #content nav {

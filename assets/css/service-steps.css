@@ -42,7 +42,7 @@
 
 .steps__content--carousel {
     height: 300px;
-    width: 770px;
+    width: 90%;
     margin-top: 80px;
     position: absolute;
     top: 50%;
@@ -52,9 +52,7 @@
     align-items: center;
     justify-content: center;
     overflow-y: visible;
-
-
-}
+  }
 
 .steps__content--carousel::-webkit-scrollbar {
     display: none;
@@ -70,7 +68,7 @@
     cursor: pointer;
     transition: all .3s ease-in-out;
     color: #00dbff;
-    padding: 8px;
+    padding: 5px;
 }
 
 .arrow-left:hover , .arrow-right:hover{
@@ -79,11 +77,11 @@
 }
 
 .arrow-left {
-    left: -80;
+    left: 0;
 }
 
 .arrow-right {
-    right: -80;
+    right: 0;
 }
 
 .carousel__gallery {
@@ -156,35 +154,28 @@
     border: solid 2px #00ddff63;
 }
 
+@media (max-width:1120px) {
+    .steps__content{
+        width: 90%;
+    }
+    .steps__content--carousel {
+        width: 100%;
+    }
 
-@media (max-width:1010px) {
+}
+
+@media (max-width:1020px) {
     .carousel__gallery {
         width: 530px;
     }
 
-    .steps__content--carousel {
-        width: 530px;
-    }
 }
 
 @media (max-width:700px) {
     .carousel__gallery {
         width: 260px;
     }
-
-    .steps__content--carousel {
-        width: 260px;
-    }
-
-    .carousel__card {
-        opacity: 1;
-    }
-
-    .arrow-left {
-        left: -70;
-    }
-
-    .arrow-right {
-        right: -70;
+    .arrow-left, .arrow-right {
+        padding: 1px;
     }
 }
