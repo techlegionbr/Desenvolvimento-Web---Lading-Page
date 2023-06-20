@@ -1,16 +1,24 @@
 // Consts
 const HEADER = document.querySelector("header");
-const SEGMENT = document.querySelector(".form__box--segmento");
-const DROPDOWN = document.querySelector(".form__box--dropdown");
+const FIRST_SEGMENT = document.querySelector("#first-box-segmento");
+const FIRST_DROPDOWN = document.querySelector("#first-dropdown");
+const SECOND_SEGMENT = document.querySelector("#second-segment");
+const SECOND_DROPDOWN =document.querySelector("#second-dropdown");
+const ALL_DROPDOWN = document.querySelectorAll(".form__box--dropdown");
+const ALL_SEGMENT = document.querySelectorAll(".form__box--segmento"); 
 const ARROW = document.querySelector(".form__box--segmento button i");
 const LIST = document.querySelectorAll(".form__box--dropdown ul li");
-const FORM_WHATS = document.querySelector(".form__box--whatsapp input");
-const SUBMIT = document.querySelector(".form__box--submit");
-const FORM_BOXS = document.querySelectorAll(".form__box");
+const FIRST_SUBMIT = document.querySelector("#first-submit");
+const SECOND_SUBMIT = document.querySelector("#second-submit");
+const FIRSTS_FORM_BOXS = document.querySelectorAll("#first_form .form__box");
+const SECOND_FORM_BOXS = document.querySelectorAll("#second_form .form__box");
+const FIRST_FORM = document.querySelector("#first_form");
+const SECOND_FORM = document.querySelector("#second_form");
 const LATERAL_MENU = document.querySelector(".lateralMenu");
 const BUTTON_HAMBURGUER = document.getElementById('button-hamburguer');
 // Marker for formatting the Whatsapp number
-VMasker(document.querySelector('.form__box--whatsapp input')).maskPattern("(99) 9 9999-9999");
+VMasker(document.querySelector('#first_box_whatsapp input')).maskPattern("(99) 9 9999-9999");
+VMasker(document.querySelector('#second_box_whatsapp input')).maskPattern("(99) 9 9999-9999");
 
 // Functions
 
@@ -29,9 +37,9 @@ const clickOutsideLateralMenu = (event) => {
 }
 
 // Function that shows or hides the dropdown
-const showDropdown = () => {
+const showDropdown = (DROPDOWN) => {
     if (DROPDOWN.dataset.active === "active") {
-        disappearDropdown()
+        disappearDropdown(DROPDOWN);
     } else {
         DROPDOWN.style.display = "flex";
         setTimeout(() => {
@@ -45,7 +53,7 @@ const showDropdown = () => {
 }
 
 // Function that hides the dropdown
-const disappearDropdown = () => {
+const disappearDropdown = (DROPDOWN) => {
     setTimeout(() => {
         DROPDOWN.style.display = "none";
     }, 100);
@@ -58,13 +66,17 @@ const disappearDropdown = () => {
 
 // Function that identifies a click outside the dropdown and hides it
 const clickOutsideDropdown = (event) => {
-    if (!SEGMENT.contains(event.target) && !DROPDOWN.contains(event.target)) {
-        disappearDropdown();
+    for(let i = 0; i < ALL_DROPDOWN.length; i++){
+        if (!ALL_DROPDOWN[i].contains(event.target) && !ALL_SEGMENT[i].contains(event.target)) {
+            disappearDropdown(ALL_DROPDOWN[i]);
+        }
+
     }
 }
 
 // Function that selects one of the select options and removes previously selected options
 const selected = (event) => {
+    let SEGMENT = event.target.parentNode.parentNode.parentNode.querySelector(".form__box--segmento");
     if (!event.target.classList.contains('selected')) {
 
         LIST.forEach((e) => {
@@ -73,7 +85,7 @@ const selected = (event) => {
 
         event.target.classList.add('selected');
         SEGMENT.firstElementChild.value = event.target.textContent;
-        disappearDropdown();
+        disappearDropdown(event.target.parentNode.parentNode);
     } else {
         event.target.classList.remove('selected');
         SEGMENT.firstElementChild.value = '';
@@ -81,8 +93,8 @@ const selected = (event) => {
 }
 
 // Function that checks if the select value was selected correctly
-const checkValue = () => {
-    const fullBoxes = Array.from(FORM_BOXS);
+const checkValue = (form_boxs, form) => {
+    const fullBoxes = Array.from(form_boxs);
 
     const emptyBoxs = fullBoxes.filter(e => e.firstElementChild.value == "");
 
@@ -94,7 +106,7 @@ const checkValue = () => {
             }, 600);
         })
     } else {
-        document.querySelector('form').submit();
+        form.submit();
     }
 }
 
@@ -103,9 +115,13 @@ const checkValue = () => {
 //Events 
 
 // Event that starts the select
-SEGMENT.addEventListener('click', () => {
-    showDropdown();
+FIRST_SEGMENT.addEventListener('click', () => {
+    showDropdown(FIRST_DROPDOWN);
 });
+SECOND_SEGMENT.addEventListener('click', () => {
+    showDropdown(SECOND_DROPDOWN);
+});
+
 
 // Click event outside the dropdown
 document.addEventListener('click', clickOutsideDropdown);
@@ -114,13 +130,21 @@ document.addEventListener('click', clickOutsideDropdown);
 document.addEventListener('click', clickOutsideLateralMenu);
 
 // Event that removes the form's default submit
-document.querySelector(".form").addEventListener("submit", function (event) {
-    event.preventDefault();
 
+FIRST_FORM.addEventListener("submit", function (event) {
+    event.preventDefault();
+})
+SECOND_FORM.addEventListener("submit", function (event) {
+    event.preventDefault();
 })
 
 // Event that to validate the form values when clicking submit
-SUBMIT.addEventListener('click', checkValue);
+FIRST_SUBMIT.addEventListener('click', ()=>{
+    checkValue(FIRSTS_FORM_BOXS, FIRST_FORM);
+});
+SECOND_SUBMIT.addEventListener('click', ()=>{
+    checkValue(SECOND_FORM_BOXS, SECOND_FORM);
+});
 
 // Event that adds a background to the Header or removes it according to the scroll movement
 document.addEventListener('scroll', function () {

@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./assets/css/service-steps.css">
   <link rel="stylesheet" href="./assets/css/services-card.css">
-  <link rel="stylesheet" href="assets/css/faq-section.css">
+  <link rel="stylesheet" href="./assets/css/faq-section.css">
+  <link rel="stylesheet" href="./assets/css/contacts.css">
   <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,275 +31,330 @@
 </head>
 
 <body>
-    <header>
-      <div id="content">
-        <a href="/">
-          <div id="imagem-logo">
-            <img src="/assets/imgs/Logo_Tech_Legion_H_02_Blue (1).png" alt="logo da techlegion" width="200" />
-          </div>
-        </a>
-        <nav>
-          <a>Home</a>
-          <a>Serviços</a>
-          <a>Sobre</a>
-          <a>Dúvidas</a>
-          <a>Contato</a>
-        </nav>
-        <button id="button-hamburguer" onclick="handleSideMenu()"><i class="bx bx-menu"></i></button>
-      </div>
-      <div class="lateralMenu">
-        <i class='bx bx-chevron-right' onclick="handleSideMenu()"></i>
-        <nav>
-          <a><span>Home</span></a>
-          <a><span>Serviços</span></a>
-          <a><span>Sobre</span></a>
-          <a><span>Dúvidas</span></a>
-          <a><span>Contato</span></a>
-        </nav>
-      </div>
-    </header>
-    <section id="home">
-      <div class="home__content">
-        <div id="description" class="home__content__box home__content__box--description">
-          <h1>Desenvolva seu site <i class="bx bx-desktop"></i></h1>
-          <h2>Morbi ac sollicitudin</h2>
-          <br />
-          <p>
-            Aliquam sed turpis in sapien ullamcorper auctor. Sed quis nisl eu
-            mauris consequat dictum. Mauris varius ornare orci et pharetra.
-            Aliquam erat volutpat. Donec imperdiet nisi tempor, convallis turpis
-            sed, bibendum est.
-          </p>
+  <header>
+    <div id="content">
+      <a href="/">
+        <div id="imagem-logo">
+          <img src="/assets/imgs/Logo_Tech_Legion_H_02_Blue (1).png" alt="logo da techlegion" width="200" />
         </div>
-        <div class="home__content__box home__content__box--form">
-          <form action="/submit" id="form" class="form">
-            <div class="form__box form__box--nome">
-              <input type="text" id="nome" name="nome" autocomplete="off" required placeholder="Nome">
-            </div>
-            <div class="form__box form__box--email">
-              <input type="email" id="email" name="email" autocomplete="off" required placeholder="Email">
-            </div>
-            <div class="form__box form__box--whatsapp">
-              <input type="text" id="whatsapp" autocomplete="off" required placeholder="WhatsApp"
-                data-inputmask="'mask': '(99) 9999-9999'">
-            </div>
-            <div class="form__box form__box--segmento">
-              <input type="text" id="Segmento" required disabled placeholder="Segmento">
-              <button>
-                <i class="bx bxs-down-arrow"></i>
-              </button>
-            </div>
-            <div data-active='' class="form__box form__box--dropdown">
-              <ul>
-                <li onclick="selected(event)">Serviço</li>
-                <li onclick="selected(event)">Varejo</li>
-                <li onclick="selected(event)">Indústria</li>
-                <li onclick="selected(event)">E-commerce</li>
-                <li onclick="selected(event)">SAAS</li>
-                <li onclick="selected(event)">Educação</li>
-                <li onclick="selected(event)">Outros</li>
-              </ul>
-            </div>
-            <input type="submit" class="form__box--submit" name="Button" value="QUERO CRIAR MEU WEBSITE">
-          </form>
-        </div>
-      </div>
-    </section>
-    <section id="services">
-      <div class="title">
-        <h1>Lorem ipsum</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto totam ab veritatis sequi, <br>
-          nesciunt autem laborum officia rerum eveniet vel.
+      </a>
+      <nav>
+        <a>Home</a>
+        <a>Serviços</a>
+        <a>Sobre</a>
+        <a>Dúvidas</a>
+        <a>Contato</a>
+      </nav>
+      <button id="button-hamburguer" onclick="handleSideMenu()"><i class="bx bx-menu"></i></button>
+    </div>
+    <div class="lateralMenu">
+      <i class='bx bx-chevron-right' onclick="handleSideMenu()"></i>
+      <nav>
+        <a><span>Home</span></a>
+        <a><span>Serviços</span></a>
+        <a><span>Sobre</span></a>
+        <a><span>Dúvidas</span></a>
+        <a><span>Contato</span></a>
+      </nav>
+    </div>
+  </header>
+  <section id="home">
+    <div class="home__content">
+      <div id="description" class="home__content__box home__content__box--description">
+        <h1>Desenvolva seu site <i class="bx bx-desktop"></i></h1>
+        <h2>Morbi ac sollicitudin</h2>
+        <br />
+        <p>
+          Aliquam sed turpis in sapien ullamcorper auctor. Sed quis nisl eu
+          mauris consequat dictum. Mauris varius ornare orci et pharetra.
+          Aliquam erat volutpat. Donec imperdiet nisi tempor, convallis turpis
+          sed, bibendum est.
         </p>
       </div>
-      <div id="content">
-        <div class="card">
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet</p>
-          <img class="image" src="./assets/imgs/code-alt-regular-36.png">
-        </div>
-        <div class="card">
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet</p>
-          <img class="image" src="./assets/imgs/devices-regular-36.png">
-        </div>
-        <div class="card">
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet</p>
-          <img class="image" src="./assets/imgs/globe-regular-36.png">
-        </div>
-        <div class="card">
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet</p>
-          <img class="image" src="./assets/imgs/laptop-regular-36.png">
-        </div>
-        <div class="card">
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet</p>
-          <img class="image" src="./assets/imgs/layout-regular-36.png">
-        </div>
-        <div class="card">
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet</p>
-          <img class="image" src="./assets/imgs/server-regular-36.png">
-        </div>
-      </div>
-    </section>
-    <section id="steps">
-      <div class="steps__content">
-        <div class="steps__content--title">
-          <h1>ETAPAS PARA
-            <br>
-            <span>DESENVOLVER O SEU SITE</span>
-          </h1>
-          <p>Todo o processo pensado para o melhor resultado do seu site</p>
-        </div>
-        <div class="steps__content--carousel">
-          <i class='arrow-left bx bx-chevron-left' onclick="handleSideMenu()"></i>
-          <i class='arrow-right bx bx-chevron-right' onclick="handleSideMenu()"></i>
-          <div class="carousel__gallery">
-            <div class="carousel__card current_item" card-carrossel>
-              <span>
-                1º
-              </span>
-              <i class='bx bx-notepad'></i>
-              <h4>ESPECIFICAÇÕES</h4>
-              <p>Levantamento e documentação das necessidades do cliente para atender o escopo do projeto.</p>
-            </div>
-            <div class="carousel__card" card-carrossel>
-              <span>
-                2º
-              </span>
-              <i class='bx bx-palette'></i>
-              <h4>UX/UI DESIGN</h4>
-              <p>Entendimento e criação da interface de um software, sistema ou mobile validando a usabilidade a essência
-                de sua marca.</p>
-            </div>
-            <div class="carousel__card" card-carrossel>
-              <span>
-                3º
-              </span>
-              <i class='bx bx-line-chart'></i>
-              <h4>PLANEJAMENTO</h4>
-              <p>Preparação para iniciar a construção do projeto, estabelecendo métricas e planos que serão acompanhados
-                ao longo do desenvolvimento.</p>
-            </div>
-            <div class="carousel__card" card-carrossel>
-              <span>
-                4º
-              </span>
-              <i class='bx bx-code-block'></i>
-              <h4>CONSTRUÇÃO</h4>
-              <p>Etapa onde a equipe de codificação executa as demandas utilizando métodos ágeis, que aumentam o foco e a
-                produtividade ao longo do projeto.</p>
-            </div>
-            <div class="carousel__card" card-carrossel>
-              <span>
-                5º
-              </span>
-              <i class='bx bx-check-circle'></i>
-              <h4>QUALIDADE</h4>
-              <p>Testes integrados e automatizados, além de dupla checagem para aprovação e subida de pull requests,
-                garantindo qualidade a seu sistema.</p>
-            </div>
-            <div class="carousel__card" card-carrossel>
-              <span>
-                6º
-              </span>
-              <i class='bx bx-search-alt-2'></i>
-              <h4>HOMOLOGAÇÃO</h4>
-              <p>Etapa ocorre durante e ao final do desenvolvimento de todo o projeto, de forma a garantir que todos os
-                requisitos foram validados.</p>
-            </div>
-            <div class="carousel__card" card-carrossel>
-              <span>
-                7º
-              </span>
-              <i class='bx bx-desktop'></i>
-              <h4>IMPLANTAÇÃO</h4>
-              <p>As funcionalidades desenvolvidas e aprovadas pelo cliente na fase de homologação, serão colocados em
-                produção efetiva.</p>
-            </div>
+      <div class="home__content__box home__content__box--form">
+        <form action="/submit" id="first_form" class="form">
+          <div class="form__box form__box--nome">
+            <input type="text" id="nome" name="nome" autocomplete="off" required placeholder="Nome">
           </div>
-        </div>
-      </div>
-    </section>
-    <section id="faqSection">
-      <div class="faq__content">
-        <div class="steps__content--title">
-          <h1>PERGUNTAS FREQUENTES SOBRE
-                  <br>
-            <span>DESENVOLVER O SEU SITE</span>
-          </h1>
-          <p>Respostas para as suas dúvidas mais comuns antes de contratar nossos serviços</p>
-        </div>
-        <div class="faq__content__boxs">
-          <div class="faq__box faq__content__boxs--question">
-            <ul class="faq">
-              <li class="faq__question" data-active="false" box-question>
-                <div class="question">
-                  <span>1.</span>
-                  <p>Quais são os benefícios de contratar um serviço de desenvolvimento de ecommerce?</p>
-                  <i class="bx bxs-down-arrow"></i>
-                </div>
-                <div class="answer">
-                  <p>Ao contratar um serviço de desenvolvimento de e-commerce, você pode se beneficiar de
-                    profissionais especializados que têm experiência em projetar e construir lojas online eficientes e
-                    atraentes. Isso pode economizar tempo e esforço, garantindo que sua loja seja configurada corretamente
-                    desde o início. Além disso, um bom serviço de desenvolvimento de e-commerce.</p>
-                </div>
-              </li>
-              <li class="faq__question" data-active="false" box-question>
-                <div class="question">
-                  <span>2.</span>
-                  <p>Quanto tempo leva para desenvolver um ecommerce?</p>
-                  <i class="bx bxs-down-arrow"></i>
-                </div>
-                <div class="answer">
-                  <p>O tempo necessário para desenvolver um e-commerce pode variar dependendo da complexidade do projeto.
-                    Projetos mais simples podem levar algumas semanas, enquanto projetos mais complexos podem levar vários
-                    meses. É importante discutir os requisitos específicos do seu projeto com a equipe de desenvolvimento
-                    para obter uma estimativa mais precisa.</p>
-                </div>
-              </li>
-              <li class="faq__question" data-active="false" box-question>
-                <div class="question">
-                  <span>3.</span>
-                  <p>Quanto custa o desenvolvimento de um ecommerce?</p>
-                  <i class="bx bxs-down-arrow"></i>
-                </div>
-                <div class="answer">
-                  <p>O custo do desenvolvimento de um e-commerce também depende de vários fatores, como a funcionalidade desejada, o design personalizado, a integração com sistemas de pagamento e outras necessidades específicas do seu negócio. É melhor entrar em contato com empresas de desenvolvimento de e-commerce para discutir seus requisitos e obter orçamentos personalizados.</p>
-                </div>
-              </li>
-              <li class="faq__question" data-active="false" box-question>
-                <div class="question">
-                  <span>4.</span>
-                  <p>Posso atualizar e gerenciar meu ecommerce após o lançamento?</p>
-                  <i class="bx bxs-down-arrow"></i>
-                </div>
-                <div class="answer">
-                  <p>Sim, a maioria dos serviços de desenvolvimento de e-commerce oferece opções para que você atualize e gerencie sua loja online depois que ela for lançada. Geralmente, você receberá um painel de administração intuitivo que permite adicionar e atualizar produtos, controlar estoque, gerenciar pedidos e realizar outras tarefas relacionadas à manutenção do seu e-commerce.</p>
-                </div>
-              </li>
-              <li class="faq__question" data-active="false" box-question>
-                <div class="question">
-                  <span>5.</span>
-                  <p>O serviço de desenvolvimento de ecommerce inclui suporte técnico?</p>
-                  <i class="bx bxs-down-arrow"></i>
-                </div>
-                <div class="answer">
-                  <p>Sim, muitas empresas de desenvolvimento de e-commerce oferecem suporte técnico para ajudar a resolver quaisquer problemas ou responder a perguntas relacionadas à sua loja online. O suporte técnico pode variar de acordo com a empresa, então é importante esclarecer os detalhes sobre o suporte oferecido antes de contratar um serviço de desenvolvimento de e-commerce.</p>
-                </div>
-              </li>
+          <div class="form__box form__box--email">
+            <input type="email" id="email" name="email" autocomplete="off" required placeholder="Email">
+          </div>
+          <div id="first_box_whatsapp" class="form__box form__box--whatsapp">
+            <input type="text" id="whatsapp" autocomplete="off" required placeholder="WhatsApp"
+              data-inputmask="'mask': '(99) 9999-9999'">
+          </div>
+          <div id="first-box-segmento" class="form__box form__box--segmento">
+            <input type="text" id="Segmento" required disabled placeholder="Segmento">
+            <button>
+              <i class="bx bxs-down-arrow"></i>
+            </button>
+          </div>
+          <div id="first-dropdown" class="form__box form__box--dropdown" data-active=''>
+            <ul>
+              <li onclick="selected(event)">Serviço</li>
+              <li onclick="selected(event)">Varejo</li>
+              <li onclick="selected(event)">Indústria</li>
+              <li onclick="selected(event)">E-commerce</li>
+              <li onclick="selected(event)">SAAS</li>
+              <li onclick="selected(event)">Educação</li>
+              <li onclick="selected(event)">Outros</li>
             </ul>
           </div>
-          <div class="faq__box faq__content__boxs--image">
-            <!-- <img src="/assets/imgs/wepik-export-20230614223511mFi0.png"> -->
+          <input id="first-submit" type="submit" class="form__box--submit" name="Button"
+            value="QUERO CRIAR MEU WEBSITE">
+        </form>
+      </div>
+    </div>
+  </section>
+  <section id="services">
+    <div class="title">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto totam ab veritatis sequi, <br>
+        nesciunt autem laborum officia rerum eveniet vel.
+      </p>
+    </div>
+    <div id="content">
+      <div class="card">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <img class="image" src="./assets/imgs/code-alt-regular-36.png">
+      </div>
+      <div class="card">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <img class="image" src="./assets/imgs/devices-regular-36.png">
+      </div>
+      <div class="card">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <img class="image" src="./assets/imgs/globe-regular-36.png">
+      </div>
+      <div class="card">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <img class="image" src="./assets/imgs/laptop-regular-36.png">
+      </div>
+      <div class="card">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <img class="image" src="./assets/imgs/layout-regular-36.png">
+      </div>
+      <div class="card">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <img class="image" src="./assets/imgs/server-regular-36.png">
+      </div>
+    </div>
+  </section>
+  <section id="steps">
+    <div class="steps__content">
+      <div class="steps__content--title">
+        <h1>ETAPAS PARA
+          <br>
+          <span>DESENVOLVER O SEU SITE</span>
+        </h1>
+        <p>Todo o processo pensado para o melhor resultado do seu site</p>
+      </div>
+      <div class="steps__content--carousel">
+        <i class='arrow-left bx bx-chevron-left' onclick="handleSideMenu()"></i>
+        <i class='arrow-right bx bx-chevron-right' onclick="handleSideMenu()"></i>
+        <div class="carousel__gallery">
+          <div class="carousel__card current_item" card-carrossel>
+            <span>
+              1º
+            </span>
+            <i class='bx bx-notepad'></i>
+            <h4>ESPECIFICAÇÕES</h4>
+            <p>Levantamento e documentação das necessidades do cliente para atender o escopo do projeto.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              2º
+            </span>
+            <i class='bx bx-palette'></i>
+            <h4>UX/UI DESIGN</h4>
+            <p>Entendimento e criação da interface de um software, sistema ou mobile validando a usabilidade a essência
+              de sua marca.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              3º
+            </span>
+            <i class='bx bx-line-chart'></i>
+            <h4>PLANEJAMENTO</h4>
+            <p>Preparação para iniciar a construção do projeto, estabelecendo métricas e planos que serão acompanhados
+              ao longo do desenvolvimento.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              4º
+            </span>
+            <i class='bx bx-code-block'></i>
+            <h4>CONSTRUÇÃO</h4>
+            <p>Etapa onde a equipe de codificação executa as demandas utilizando métodos ágeis, que aumentam o foco e a
+              produtividade ao longo do projeto.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              5º
+            </span>
+            <i class='bx bx-check-circle'></i>
+            <h4>QUALIDADE</h4>
+            <p>Testes integrados e automatizados, além de dupla checagem para aprovação e subida de pull requests,
+              garantindo qualidade a seu sistema.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              6º
+            </span>
+            <i class='bx bx-search-alt-2'></i>
+            <h4>HOMOLOGAÇÃO</h4>
+            <p>Etapa ocorre durante e ao final do desenvolvimento de todo o projeto, de forma a garantir que todos os
+              requisitos foram validados.</p>
+          </div>
+          <div class="carousel__card" card-carrossel>
+            <span>
+              7º
+            </span>
+            <i class='bx bx-desktop'></i>
+            <h4>IMPLANTAÇÃO</h4>
+            <p>As funcionalidades desenvolvidas e aprovadas pelo cliente na fase de homologação, serão colocados em
+              produção efetiva.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <section id="faqSection">
+    <div class="faq__content">
+      <div class="steps__content--title">
+        <h1>PERGUNTAS FREQUENTES SOBRE
+          <br>
+          <span>DESENVOLVER O SEU SITE</span>
+        </h1>
+        <p>Respostas para as suas dúvidas mais comuns antes de contratar nossos serviços</p>
+      </div>
+      <div class="faq__content__boxs">
+        <div class="faq__box faq__content__boxs--question">
+          <ul class="faq">
+            <li class="faq__question" data-active="false" box-question>
+              <div class="question">
+                <span>1.</span>
+                <p>Quais são os benefícios de contratar um serviço de desenvolvimento de ecommerce?</p>
+                <i class="bx bxs-down-arrow"></i>
+              </div>
+              <div class="answer">
+                <p>Ao contratar um serviço de desenvolvimento de e-commerce, você pode se beneficiar de
+                  profissionais especializados que têm experiência em projetar e construir lojas online eficientes e
+                  atraentes. Isso pode economizar tempo e esforço, garantindo que sua loja seja configurada corretamente
+                  desde o início. Além disso, um bom serviço de desenvolvimento de e-commerce.</p>
+              </div>
+            </li>
+            <li class="faq__question" data-active="false" box-question>
+              <div class="question">
+                <span>2.</span>
+                <p>Quanto tempo leva para desenvolver um ecommerce?</p>
+                <i class="bx bxs-down-arrow"></i>
+              </div>
+              <div class="answer">
+                <p>O tempo necessário para desenvolver um e-commerce pode variar dependendo da complexidade do projeto.
+                  Projetos mais simples podem levar algumas semanas, enquanto projetos mais complexos podem levar vários
+                  meses. É importante discutir os requisitos específicos do seu projeto com a equipe de desenvolvimento
+                  para obter uma estimativa mais precisa.</p>
+              </div>
+            </li>
+            <li class="faq__question" data-active="false" box-question>
+              <div class="question">
+                <span>3.</span>
+                <p>Quanto custa o desenvolvimento de um ecommerce?</p>
+                <i class="bx bxs-down-arrow"></i>
+              </div>
+              <div class="answer">
+                <p>O custo do desenvolvimento de um e-commerce também depende de vários fatores, como a funcionalidade
+                  desejada, o design personalizado, a integração com sistemas de pagamento e outras necessidades
+                  específicas do seu negócio. É melhor entrar em contato com empresas de desenvolvimento de e-commerce
+                  para discutir seus requisitos e obter orçamentos personalizados.</p>
+              </div>
+            </li>
+            <li class="faq__question" data-active="false" box-question>
+              <div class="question">
+                <span>4.</span>
+                <p>Posso atualizar e gerenciar meu ecommerce após o lançamento?</p>
+                <i class="bx bxs-down-arrow"></i>
+              </div>
+              <div class="answer">
+                <p>Sim, a maioria dos serviços de desenvolvimento de e-commerce oferece opções para que você atualize e
+                  gerencie sua loja online depois que ela for lançada. Geralmente, você receberá um painel de
+                  administração intuitivo que permite adicionar e atualizar produtos, controlar estoque, gerenciar
+                  pedidos e realizar outras tarefas relacionadas à manutenção do seu e-commerce.</p>
+              </div>
+            </li>
+            <li class="faq__question" data-active="false" box-question>
+              <div class="question">
+                <span>5.</span>
+                <p>O serviço de desenvolvimento de ecommerce inclui suporte técnico?</p>
+                <i class="bx bxs-down-arrow"></i>
+              </div>
+              <div class="answer">
+                <p>Sim, muitas empresas de desenvolvimento de e-commerce oferecem suporte técnico para ajudar a resolver
+                  quaisquer problemas ou responder a perguntas relacionadas à sua loja online. O suporte técnico pode
+                  variar de acordo com a empresa, então é importante esclarecer os detalhes sobre o suporte oferecido
+                  antes de contratar um serviço de desenvolvimento de e-commerce.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="faq__box faq__content__boxs--image"></div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+
+
+    <div id="contact__content">
+      <div class="steps__content--title">
+        <h1>VAMOS FAZER O SEU
+          <br>
+          <span> ECOMMERCE?</span>
+        </h1>
+        <p>Preencha esse formulario</p>
+      </div>
+      <div class="contact__boxs">
+
+        <form action="/submit" id="second_form" class="form">
+          <div class="form__box form__box--nome">
+            <input type="text" name="nome" autocomplete="off" required placeholder="Nome">
+          </div>
+          <div class="form__box form__box--email">
+            <input type="email" name="email" autocomplete="off" required placeholder="Email">
+          </div>
+          <div id="second_box_whatsapp" class="form__box form__box--whatsapp">
+            <input type="text" autocomplete="off" required placeholder="WhatsApp"
+              data-inputmask="'mask': '(99) 9999-9999'">
+          </div>
+          <div id="second-segment" class="form__box form__box--segmento">
+            <input type="text" required disabled placeholder="Segmento">
+            <button>
+              <i class="bx bxs-down-arrow"></i>
+            </button>
+          </div>
+          <div id="second-dropdown" class="form__box form__box--dropdown" data-active=''>
+            <ul>
+              <li onclick="selected(event)">Serviço</li>
+              <li onclick="selected(event)">Varejo</li>
+              <li onclick="selected(event)">Indústria</li>
+              <li onclick="selected(event)">E-commerce</li>
+              <li onclick="selected(event)">SAAS</li>
+              <li onclick="selected(event)">Educação</li>
+              <li onclick="selected(event)">Outros</li>
+            </ul>
+          </div>
+          <input type="submit" id="second-submit" class="form__box--submit" name="Button"
+            value="QUERO CRIAR MEU WEBSITE">
+        </form>
+
+      </div>
+  </section>
 </body>
 
 </html>

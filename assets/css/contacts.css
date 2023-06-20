@@ -1,0 +1,32 @@
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("/assets/imgs/wepik-export-20230620001945sB8v.jpeg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    transition: .3s;
+}
+
+#contact__content{
+    width: 80%;
+}
+.contact__boxs{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 370px;
+    width: 100%;
+}
+
+@media (max-width: 500px){
+    #contact{
+        background-position:25% 0% ;
+    }
+}
+
