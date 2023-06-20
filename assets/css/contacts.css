@@ -7,7 +7,7 @@
     overflow: hidden;
     background-image: url("/assets/imgs/wepik-export-20230620001945sB8v.jpeg");
     background-repeat: no-repeat;
-    background-position:center;
+    background-position:0px 0px;
     background-size: cover;
     transition: .3s;
 }
