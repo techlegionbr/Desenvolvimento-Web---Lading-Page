@@ -5,7 +5,7 @@
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background-image: url("/assets/imgs/wepik-export-20230620001945sB8v.jpeg");
+    /* background-image: url("/assets/imgs/wepik-export-20230620001945sB8v.jpeg"); */
     background-repeat: no-repeat;
     background-position:0px 0px;
     background-size: cover;
@@ -18,7 +18,7 @@
 .contact__boxs{
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     height: 370px;
     width: 100%;

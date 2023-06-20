@@ -2,7 +2,7 @@
 const HEADER = document.querySelector("header");
 const FIRST_SEGMENT = document.querySelector("#first-box-segmento");
 const FIRST_DROPDOWN = document.querySelector("#first-dropdown");
-const SECOND_SEGMENT = document.querySelector("#second-segment");
+const SECOND_SEGMENT = document.querySelector("#second-box-segment");
 const SECOND_DROPDOWN =document.querySelector("#second-dropdown");
 const ALL_DROPDOWN = document.querySelectorAll(".form__box--dropdown");
 const ALL_SEGMENT = document.querySelectorAll(".form__box--segmento"); 
@@ -10,7 +10,7 @@ const ARROW = document.querySelector(".form__box--segmento button i");
 const LIST = document.querySelectorAll(".form__box--dropdown ul li");
 const FIRST_SUBMIT = document.querySelector("#first-submit");
 const SECOND_SUBMIT = document.querySelector("#second-submit");
-const FIRSTS_FORM_BOXS = document.querySelectorAll("#first_form .form__box");
+const FIRST_FORM_BOXS = document.querySelectorAll("#first_form .form__box");
 const SECOND_FORM_BOXS = document.querySelectorAll("#second_form .form__box");
 const FIRST_FORM = document.querySelector("#first_form");
 const SECOND_FORM = document.querySelector("#second_form");
@@ -38,6 +38,9 @@ const clickOutsideLateralMenu = (event) => {
 
 // Function that shows or hides the dropdown
 const showDropdown = (DROPDOWN) => {
+    DROPDOWN.parentNode.querySelector("i").addEventListener('submit', (e)=>{
+        e.preventDefault();
+    })
     if (DROPDOWN.dataset.active === "active") {
         disappearDropdown(DROPDOWN);
     } else {
@@ -45,7 +48,7 @@ const showDropdown = (DROPDOWN) => {
         setTimeout(() => {
             DROPDOWN.classList.remove('disappear');
             DROPDOWN.classList.add('appear');
-            ARROW.style.transform = "rotate(180deg)";
+            DROPDOWN.parentNode.querySelector("i").style.transform = "rotate(180deg)";
             DROPDOWN.dataset.active = 'active';
         }, 100);
 
@@ -60,7 +63,8 @@ const disappearDropdown = (DROPDOWN) => {
 
     DROPDOWN.classList.add('disappear');
     DROPDOWN.classList.remove('appear');
-    ARROW.style.transform = "rotate(0deg)";
+    DROPDOWN.parentNode.querySelector("i").style.transform = "rotate(0deg)";
+    
     DROPDOWN.dataset.active = '';
 }
 
@@ -140,7 +144,7 @@ SECOND_FORM.addEventListener("submit", function (event) {
 
 // Event that to validate the form values when clicking submit
 FIRST_SUBMIT.addEventListener('click', ()=>{
-    checkValue(FIRSTS_FORM_BOXS, FIRST_FORM);
+    checkValue(FIRST_FORM_BOXS, FIRST_FORM);
 });
 SECOND_SUBMIT.addEventListener('click', ()=>{
     checkValue(SECOND_FORM_BOXS, SECOND_FORM);
