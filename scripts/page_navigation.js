@@ -1,20 +1,30 @@
-const NAV_LIST_ARRAY = Array.from(document.querySelectorAll("#content nav a"))
+const NAV_LIST = Array.from(document.querySelectorAll("#content nav a"))
+const SIDE_NAV_LIST =  Array.from(document.querySelectorAll(".side_links"))
 
-const updateNav = (e) => {
-    NAV_LIST_ARRAY.forEach(element => {
-        element.classList.remove("currentSection");
+const updateNav = (e, className) => {
+    NAV_LIST.forEach(element => {
+        element.classList.remove(className);
     })
-    if (!e.classList.contains("currentSection")) {
-        e.classList.add("currentSection");
+    SIDE_NAV_LIST.forEach(element => {
+        element.classList.remove(className);
+    })
+    if (!e.classList.contains(className)) {
+        e.classList.add(className);
     }
+    
 }
 
 const handleIntersect = (entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            NAV_LIST_ARRAY.forEach((e)=>{
+            NAV_LIST.forEach((e)=>{
                 if(( "#" + entry.target.id) == e.getAttribute('href')){
-                    updateNav(e);
+                    updateNav(e, "currentSection");
+                }
+            })
+            SIDE_NAV_LIST.forEach((e)=>{
+                if(("#" + entry.target.id) == e.getAttribute('href')){
+                    updateNav(e, "side_Current_Section");
                 }
             })
         }
@@ -34,10 +44,9 @@ const createObserver = () => {
     })
 }
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
     boxElement = document.querySelectorAll("section");
 
     createObserver();
 
 }, false)
-

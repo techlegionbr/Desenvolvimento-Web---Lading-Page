@@ -111,7 +111,7 @@ body::-webkit-scrollbar-thumb{
   align-items: flex-start;
 }
 
-.lateralMenu nav a{
+.side_links{
   width: auto;
   padding: 10px 80px 10px 80px;
   display: flex;
@@ -121,7 +121,11 @@ body::-webkit-scrollbar-thumb{
   border-left: 5px solid #0057ed00;
 }
 
-.lateralMenu nav a:hover{
+.side_links:hover{
+  background-color: #033c97;
+  border-left: 5px solid var(--color-third);
+}
+.side_Current_Section{
   background-color: #033c97;
   border-left: 5px solid var(--color-third);
 }
