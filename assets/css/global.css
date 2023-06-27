@@ -14,10 +14,15 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-pop);
   color: var(--color-light);
   background-color: var(--color-primary);
+
 }
 
 a {

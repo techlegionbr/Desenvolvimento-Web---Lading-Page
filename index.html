@@ -11,6 +11,7 @@
   <script src="./scripts/script.js" defer></script>
   <script src="./scripts/carousel.js" defer></script>
   <script src="./scripts/form.js" defer></script>
+  <script src="./scripts/page_navigation.js" defer></script>
 
   <!--CSS Link-->
   <link rel="stylesheet" href="./assets/css/global.css" />
@@ -42,11 +43,12 @@
         </div>
       </a>
       <nav>
-        <a>Home</a>
-        <a>Serviços</a>
-        <a>Sobre</a>
-        <a>Dúvidas</a>
-        <a>Contato</a>
+        <a class="nav_links currentSection" href="#home">Home</a>
+        <a class="nav_links" href="#services">Serviços</a>
+        <a class="nav_links" href="#steps">Etapas</a>
+        <a class="nav_links" href="#aboutSection">Sobre</a>
+        <a class="nav_links" href="#faqSection">Dúvidas</a>
+        <a class="nav_links" href="#contact">Contato</a>
       </nav>
       <button id="button-hamburguer" onclick="handleSideMenu()"><i class="bx bx-menu"></i></button>
     </div>
@@ -255,15 +257,15 @@
         <div class="box-about-info">
           <h2>IMPACTO SOCIAL E ECONÔMICO POSITIVO
             ATRAVÉS DA TECH LEGION</h2>
-            <p>Ao escolher a Tech Legion, nossos clientes não estão apenas contratando serviços sob demanda na área da
-              tecnologia, mas também estão contribuindo no desenvolvimento de profissionais em início de carreira.
-              
-              Isso ocorre porque a Tech Legion é composta por uma legião de profissionais apaixonados por tecnologia, que
-              estão cheios de energia e motivação.</p>
-            </div>
-            <div class="box-about-img">
-              <img src="./assets/imgs/medium-shot-couple-with-laptop.jpg" alt="">
-            </div>
+          <p>Ao escolher a Tech Legion, nossos clientes não estão apenas contratando serviços sob demanda na área da
+            tecnologia, mas também estão contribuindo no desenvolvimento de profissionais em início de carreira.
+
+            Isso ocorre porque a Tech Legion é composta por uma legião de profissionais apaixonados por tecnologia, que
+            estão cheios de energia e motivação.</p>
+        </div>
+        <div class="box-about-img">
+          <img src="./assets/imgs/medium-shot-couple-with-laptop.jpg" alt="">
+        </div>
       </div>
       <div class="box-about box-about-3">
         <div class="box-about-img">

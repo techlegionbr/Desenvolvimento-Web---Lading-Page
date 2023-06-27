@@ -2,14 +2,17 @@
 
 const HEADER = document.querySelector("header");
 
-// Event that adds a background to the Header or removes it according to the scroll movement
-document.addEventListener('scroll', function () {
-    if (window.pageYOffset >= 100) {
+const handleHeader = ()=>{
+    if (window.scrollY >= 100) {
         HEADER.classList.add('appearHeader');
     } else {
         HEADER.classList.remove('appearHeader');
     }
-})
+}
+
+// Event that adds a background to the Header or removes it ;according to the scroll movement
+document.addEventListener('DOMContentLoaded', handleHeader)
+document.addEventListener('scroll', handleHeader);
 
 // Dealing with the side menu
 
