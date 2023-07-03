@@ -18,12 +18,12 @@ const handleIntersect = (entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             NAV_LIST.forEach((e)=>{
-                if(( "#" + entry.target.id) == e.getAttribute('href')){
+                if(( "#" + entry.target.dataset.rect) == e.getAttribute('href')){
                     updateNav(e, "currentSection");
                 }
             })
             SIDE_NAV_LIST.forEach((e)=>{
-                if(("#" + entry.target.id) == e.getAttribute('href')){
+                if(("#" + entry.target.dataset.rect) == e.getAttribute('href')){
                     updateNav(e, "side_Current_Section");
                 }
             })
@@ -35,7 +35,7 @@ const createObserver = () => {
     let options = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.3,
+        threshold: 0.5,
     }
 
     let observer = new IntersectionObserver(handleIntersect, options);
