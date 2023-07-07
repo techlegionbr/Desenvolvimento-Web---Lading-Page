@@ -23,7 +23,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 #home .home__content {
-  width: 80%;
   margin-right: 20px;
   margin-left: 20px;
   display: flex;
@@ -138,12 +137,6 @@ body::-webkit-scrollbar-thumb{
   height: 100vh;
   background-color:white;
 }
-@media (max-width:1120px){
-  #home .home__content{
-    width: 90%;
-  }
-}
-
 @media (max-width:1000px) {
   #home {
     padding: 90px 0px 0px 20px;

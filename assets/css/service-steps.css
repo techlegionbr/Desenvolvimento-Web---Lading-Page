@@ -8,7 +8,6 @@
 }
 
 .steps__content {
-    width: 80%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -18,7 +17,7 @@
 
 .steps__content--carousel {
     height: 300px;
-    width: 90%;
+    width: 100%;
     margin-top: 80px;
     position: absolute;
     top: 50%;
@@ -130,10 +129,7 @@
     border: solid 2px #00ddff63;
 }
 
-@media (max-width:1120px) {
-    .steps__content{
-        width: 90%;
-    }
+@media (max-width:1120px) { 
     .steps__content--carousel {
         width: 100%;
     }

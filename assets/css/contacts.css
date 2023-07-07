@@ -11,9 +11,6 @@
     transition: .3s;
 }
 
-#contact__content{
-    width: 80%;
-}
 .contact__boxs{
     position: relative;
     display: flex;

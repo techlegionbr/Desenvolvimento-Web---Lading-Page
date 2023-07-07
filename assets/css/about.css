@@ -5,7 +5,6 @@
 }
 
 #about-content {
-    width: 80%;
     margin-bottom: 80px;
 }
 
@@ -28,7 +27,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* object-position: center center; */
 }
 
 .box-about-info {
@@ -51,15 +49,6 @@
 
 .box-about-2 .box-about-info {
     text-align: right;
-}
-
-
-
-
-@media (max-width:1120px) {
-    #about-content {
-        width: 90%;
-    }
 }
 
 @media (max-width:1040px) {

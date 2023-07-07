@@ -38,3 +38,12 @@ img {
   display: block;
   width: 100%;
 }
+.section-content{
+  width: 80%;
+}
+@media (max-width:1120px) {
+  .section-content {
+      width: 90%;
+  }
+
+}
