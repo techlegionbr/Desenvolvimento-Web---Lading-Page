@@ -45,7 +45,7 @@ const createObserver = () => {
 }
 
 window.addEventListener('load', () => {
-    boxElement = document.querySelectorAll("section");
+    boxElement = document.querySelectorAll(".rect");
 
     createObserver();
 

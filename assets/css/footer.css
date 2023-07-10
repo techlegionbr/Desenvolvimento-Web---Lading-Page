@@ -8,6 +8,8 @@ aside{
     box-sizing: border-box;
     gap: 10px;
     line-height: 30px;
+    border-bottom: solid 1px #0062ff9c;
+
 }
 aside p{
     line-height: 50px;

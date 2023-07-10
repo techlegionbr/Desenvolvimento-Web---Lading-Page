@@ -3,10 +3,10 @@
     display: flex;
     justify-content: center;
     border-bottom: solid 1px #0062ff9c;
-    background-image: url("/assets/imgs/foguetao-primary.png");
+    /* background-image: url("/assets/imgs/foguetao-primary.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .faq__content__boxs {
@@ -23,12 +23,14 @@
 
 .faq__content__boxs--image {
     width: 400px;
-    height: 440px;
+    height: 437px;
     margin-top: 10px;
+    
+}
+.faq__content__boxs--image img{
     border-radius: 10px;
-    background-image: url(/assets/imgs/wepik-export-20230614223511mFi0.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
+
 }
 
 .faq__content__boxs--question {
@@ -106,8 +108,6 @@
     .faq__content__boxs--image {
         width: 100%;
         height: 400px;
-        background-position: center;
-        background-size: cover;
     }
 }
 

@@ -1,19 +1,19 @@
 #services{
     background-color: var(--color-primary);
-    color: var(--color-dark);
+    padding: 40px;
 }
-#services #content{
+#services #content {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     font-family: var(--font-mont);
     gap: 45px;
-    padding: 40px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 45px auto;
 }
+
 .card{
     display: flex;
     flex-direction: column;
@@ -44,15 +44,5 @@
     bottom: 20px;
     right: 20px;
     width: 30px;
-}
-.title{
-    text-align: center;
-    color:var(--color-light);
-    line-height: 30px;
-}
-.title h1{
-    font-size: 31px;
-    color: var(--color-third);
-    line-height: 70px;
 }
 
