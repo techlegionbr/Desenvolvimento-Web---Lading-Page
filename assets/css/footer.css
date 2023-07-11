@@ -15,7 +15,7 @@ aside{
     border-bottom: solid 1px #0062ff9c;
 }
 aside p{
-    line-height: 50px;
+    text-align: center;
 }
 a img{
     display: flex;
@@ -54,15 +54,17 @@ footer p{
         display: flex;
         flex-direction: column;
         align-items: center;
+        /* background-color: red; */
     }
     .aside-content{
         flex-direction: column;
         align-items: center;
+        gap: 40px;
     }
 }
 @media(max-width:1009px){
     .aside-footer, .company, .services, .contact{
-        width: 30%;
+        width: 50%;
     }
     .aside-content{
         flex-direction: column;
