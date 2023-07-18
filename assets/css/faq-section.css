@@ -3,10 +3,7 @@
     display: flex;
     justify-content: center;
     border-bottom: solid 1px #0062ff9c;
-    /* background-image: url("/assets/imgs/foguetao-primary.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
+    background-color: #0e1549;
 }
 
 .faq__content__boxs {
